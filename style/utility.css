@@ -1,0 +1,37 @@
+.py-base{
+  padding-block: var(--py-base);
+}
+.py-lg{
+  padding-block: var(--py-lg);
+}
+.py-xl{
+  padding-block: var(--py-xl);
+}
+.px-lg{
+  padding-inline: var(--px-lg);
+}
+.container{/* aki pego a largura do mobile crio uma variavel e depois vou ver a largura minima quer seria width:min(var(--max-width), 100% - var(--px-lg) *2 a var px-lg é 1.5rem variavel criada no global */
+  --max-width:375px;
+  width: min(var(--max-width), 100% - var(--px-lg) *2);
+  border: solid pink;
+  margin-inline: auto;
+}
+.desktop-only{
+  display: none;
+}
+.even-columns{
+  display: grid;
+  gap: 1rem;
+}
+@media (width >= 80em){
+  .container{
+    --max-width:80rem;
+  }
+  .desktop-only{
+    display: initial;
+  }
+  .even-columns{
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  }
+}
