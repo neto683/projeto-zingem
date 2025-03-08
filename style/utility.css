@@ -13,7 +13,6 @@
 .container{/* aki pego a largura do mobile crio uma variavel e depois vou ver a largura minima quer seria width:min(var(--max-width), 100% - var(--px-lg) *2 a var px-lg é 1.5rem variavel criada no global */
   --max-width:375px;
   width: min(var(--max-width), 100% - var(--px-lg) *2);
-  border: solid pink;
   margin-inline: auto;
 }
 .desktop-only{
@@ -26,11 +25,17 @@
 .flex{
   display: flex;
 }
+.itens-center{
+  align-items: center;
+}
 .grid{
   display: grid;
 }
 .gap-1{
   gap: 1rem;
+}
+.gap-1\.5{
+  gap: 1.5rem;
 }
 @media (width >= 80em){
   .container{
